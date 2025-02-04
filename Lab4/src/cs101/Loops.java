@@ -148,6 +148,24 @@ public class Loops {
 		}
 	}
 
+	public static void loop_l() {
+
+		// L. Write a WHILE loop that prints out the numbers 0 to 10 (inclusive)
+		// in ascending order (0,1,2,....,10)
+		// Use a single print statement inside a loop
+		// You do NOT need to label these with `l`
+
+	}
+
+	public static void loop_m() {
+
+		// M. Write a FOR loop that prints out the numbers 10 to 5 (inclusive)
+		// in descending order (10,9,8,...,5)
+		// Use a single print statement inside a loop
+		// You do NOT need to label these with `m`
+
+	}
+
 	public static void main(String[] args) {
 
 		// Feel free to comment out certain lines to make it easier
@@ -163,6 +181,8 @@ public class Loops {
 		Loops.loop_i();
 		Loops.loop_j();
 		Loops.loop_k();
+		Loops.loop_l();
+		Loops.loop_m();
 
 	}
 

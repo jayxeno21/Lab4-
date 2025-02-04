@@ -161,4 +161,30 @@ class LoopsTest {
 		assertEquals(expectedOutput, outContent.toString());
 	}
 
+	@Test
+	void test_l() {
+
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+		System.setOut(new PrintStream(outContent));
+
+		Loops.loop_l();
+
+		String expectedOutput = "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n";
+
+		assertEquals(expectedOutput, outContent.toString());
+	}
+
+	@Test
+	void test_m() {
+
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+		System.setOut(new PrintStream(outContent));
+
+		Loops.loop_m();
+
+		String expectedOutput = "10\n9\n8\n7\n6\n5\n";
+
+		assertEquals(expectedOutput, outContent.toString());
+	}
+
 }
