@@ -8,36 +8,38 @@ public class Loops {
 	public static void loop_a() {
 
 		// A. convert this while loop to a FOR loop
-		int a = 0;
-		while (a < 5) {
+		for (int a = 0; a < 5; a++) {
 			System.out.println("a: " + a);
-			a++;
 		}
 	}
 
 	public static void loop_b() {
 
 		// B. convert this while loop to a FOR loop
-		int b = 13;
-		while (b >= 10) {
+		for (int b = 13; b >= 10; b--) {
 			System.out.println("b: " + b);
-			b--;
+
 		}
 	}
 
 	public static void loop_c() {
 
 		// C. convert this for loop to a WHILE loop
-		for (int c = 0; c <= 4; c++) {
-			System.out.println("c: " + c);
-		}
+		int c = 0;
+		while (c < 4)
+			c = c + 1;
+		System.out.println(c);
+
 	}
 
 	public static void loop_d() {
 
 		// D. convert this for loop to a WHILE loop
-		for (int d = 3; d < 13; d += 2) {
-			System.out.println("d: " + d);
+		int d = 3;
+		while (d < 13)
+			d = d + 2;
+		{
+			System.out.println(d);
 		}
 	}
 
@@ -47,13 +49,11 @@ public class Loops {
 		// need an if statement or a break statement
 		// It should still be a while loop.
 		int e = 2;
-		while (e < 10) {
-			if (e >= 5) {
-				break;
-			}
-			System.out.println("e: " + e);
-			e = e + 1;
+		while (e < 5) {
+			e = e + 5;
+			System.out.println(e);
 		}
+
 	}
 
 	public static void loop_f() {
@@ -63,11 +63,11 @@ public class Loops {
 		// It should still be a while loop.
 		int f = 10;
 		while (f >= 3) {
-			if (f < 5) {
-				break;
+			f = f + 3;
+			{
 			}
 			System.out.println("f: " + f);
-			f--;
+
 		}
 	}
 
@@ -88,37 +88,28 @@ public class Loops {
 
 		// H. Convert both the inner and outer while loops
 		// into FOR LOOPS
-		int h1 = 0;
-		while (h1 < 4) {
-			System.out.println("h1: " + h1);
+		for (int h1 = 0; h1 < 4; h1++)
+			System.out.println(h1);
 
-			int h2 = 1;
-			while (h2 < 3) {
-				System.out.println("h2: " + h2);
+		for (int h2 = 1; h2 < 3; h2++) {
+			System.out.println(h2);
 
-				h2++;
-			}
-
-			h1++;
 		}
+
 	}
 
 	public static void loop_i() {
 
 		// I. Convert both the inner and outer while loops
 		// into FOR LOOPS
-		int i1 = 0;
-		while (i1 < 2) {
+		for (int i1 = 0; i1 <= 2; i1++) {
 			System.out.println("i1: " + i1);
 
-			int i2 = 5;
-			while (i2 > 0) {
+			for (int i2 = 5; i2 > 0; i2++) {
 				System.out.println("i2: " + i2);
 
-				i2--;
 			}
 
-			i1++;
 		}
 	}
 
@@ -126,12 +117,18 @@ public class Loops {
 
 		// J. Convert both the inner and outer for loops
 		// into WHILE LOOPS
-		for (int j1 = 0; j1 < 5; j1++) {
-			System.out.println("j1: " + j1);
+		int j1 = 0;
+		while (j1 < 5) {
+			j1 = j1 + 5;
 
-			for (int j2 = 0; j2 < 2; j2++) {
-				System.out.println("j1: " + j1);
-			}
+			System.out.println(j1);
+
+			int j2 = 0;
+			while (j2 < 2)
+				;
+			j2 = j2 + 1;
+			System.out.println(j2);
+
 		}
 	}
 
@@ -139,12 +136,16 @@ public class Loops {
 
 		// K. Convert both the inner and outer for loops
 		// into WHILE LOOPS
-		for (int k1 = 10; k1 >= 5; k1--) {
-			System.out.println("k1: " + k1);
+		int k1 = 10;
+		while (k1 <= 10) {
+			k1 = k1 + 1;
+			System.out.println(k1);
 
-			for (int k2 = 0; k2 < 16; k2 += 4) {
-				System.out.println("k2: " + k2);
-			}
+			int k2 = 0;
+			while (k2 <= 16)
+				;
+			k2 = k2 + 4;
+			System.out.println(k2);
 		}
 	}
 
@@ -154,7 +155,12 @@ public class Loops {
 		// in ascending order (0,1,2,....,10)
 		// Use a single print statement inside a loop
 		// You do NOT need to label these with `l`
-
+		int a = 1;
+		while (a < 10) {
+			a = a + 1;
+			break;
+		}
+		System.out.println(a);
 	}
 
 	public static void loop_m() {
@@ -163,6 +169,10 @@ public class Loops {
 		// in descending order (10,9,8,...,5)
 		// Use a single print statement inside a loop
 		// You do NOT need to label these with `m`
+		int b = 10;
+		while (b > 1)
+			;
+		b = b + 1;
 
 	}
 
