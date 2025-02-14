@@ -26,9 +26,11 @@ public class Loops {
 
 		// C. convert this for loop to a WHILE loop
 		int c = 0;
-		while (c < 4)
-			c = c + 1;
-		System.out.println(c);
+		while (c <= 4) { // need brackets, need to include 4
+
+			System.out.println(c);
+			c = c + 1; // goes at end of loop
+		}
 
 	}
 
@@ -37,9 +39,11 @@ public class Loops {
 		// D. convert this for loop to a WHILE loop
 		int d = 3;
 		while (d < 13)
-			d = d + 2;
+
 		{
 			System.out.println(d);
+
+			d = d + 2; // goes at end of loop
 		}
 	}
 
@@ -50,8 +54,9 @@ public class Loops {
 		// It should still be a while loop.
 		int e = 2;
 		while (e < 5) {
-			e = e + 5;
+
 			System.out.println(e);
+			e = e + 1; // plus 1, goes at end
 		}
 
 	}
@@ -62,11 +67,14 @@ public class Loops {
 		// need an if statement or a break statement
 		// It should still be a while loop.
 		int f = 10;
-		while (f >= 3) {
-			f = f + 3;
+		while (f >= 5) { // change condition
+
 			{
+
+				System.out.println("f: " + f); // goes inside while loop
+
+				f = f - 1; // goes at end of while loop, still minus 1
 			}
-			System.out.println("f: " + f);
 
 		}
 	}
@@ -88,13 +96,14 @@ public class Loops {
 
 		// H. Convert both the inner and outer while loops
 		// into FOR LOOPS
-		for (int h1 = 0; h1 < 4; h1++)
+		for (int h1 = 0; h1 < 4; h1++) { // need brackets
 			System.out.println(h1);
 
-		for (int h2 = 1; h2 < 3; h2++) {
-			System.out.println(h2);
+			for (int h2 = 1; h2 < 3; h2++) {
+				System.out.println(h2);
 
-		}
+			}
+		} // need to be nested
 
 	}
 
@@ -102,10 +111,10 @@ public class Loops {
 
 		// I. Convert both the inner and outer while loops
 		// into FOR LOOPS
-		for (int i1 = 0; i1 <= 2; i1++) {
+		for (int i1 = 0; i1 < 2; i1++) {
 			System.out.println("i1: " + i1);
 
-			for (int i2 = 5; i2 > 0; i2++) {
+			for (int i2 = 5; i2 > 0; i2--) { // still i2--, as in original while loop
 				System.out.println("i2: " + i2);
 
 			}
@@ -119,16 +128,17 @@ public class Loops {
 		// into WHILE LOOPS
 		int j1 = 0;
 		while (j1 < 5) {
-			j1 = j1 + 5;
 
 			System.out.println(j1);
 
 			int j2 = 0;
-			while (j2 < 2)
-				;
-			j2 = j2 + 1;
-			System.out.println(j2);
+			while (j2 < 2) { // need brackets
+				System.out.println(j2);
+				j2 = j2 + 1;
+			}
 
+			j1++; // goes at end of while loop, and this increment doesn't change from the
+					// original loop
 		}
 	}
 
@@ -137,15 +147,18 @@ public class Loops {
 		// K. Convert both the inner and outer for loops
 		// into WHILE LOOPS
 		int k1 = 10;
-		while (k1 <= 10) {
-			k1 = k1 + 1;
+		while (k1 >= 5) { // condition doesn't change
+
 			System.out.println(k1);
 
 			int k2 = 0;
-			while (k2 <= 16)
-				;
-			k2 = k2 + 4;
-			System.out.println(k2);
+			while (k2 < 16) { // need brackets
+
+				System.out.println(k2);
+				k2 = k2 + 4; // correct increment, goes at the end
+			}
+
+			k1 = k1 - 1; // goes at end, doesn't change
 		}
 	}
 
@@ -155,10 +168,11 @@ public class Loops {
 		// in ascending order (0,1,2,....,10)
 		// Use a single print statement inside a loop
 		// You do NOT need to label these with `l`
-		int a = 1;
+		int a = 0;
 		while (a < 10) {
+			System.out.println(a);
 			a = a + 1;
-			break;
+			// don't need a break! This should fully run.
 		}
 		System.out.println(a);
 	}
@@ -170,9 +184,10 @@ public class Loops {
 		// Use a single print statement inside a loop
 		// You do NOT need to label these with `m`
 		int b = 10;
-		while (b > 1)
-			;
-		b = b + 1;
+		while (b > 4) { // goes to 5
+			System.out.println(b);
+			b = b - 1; // goes down
+		} // needs brackets
 
 	}
 
